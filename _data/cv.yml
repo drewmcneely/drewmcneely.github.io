@@ -1,25 +1,25 @@
 # cv:
-#   name: Albert Einstein
-#   label: Scientist
-#   email: einstein@example.com
-#   location: Princeton, NJ
+#   name: Drew Allen McNeely
+#   # label: Scientist
+#   email: drew@drewmcneely.net
+#   location: Philadelphia, PA
 #   image: ""
-#   summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+#   # summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
 # 
-#   social_networks:
-#     - network: X
-#       username: AlbertEinstein
-#     - network: GitHub
-#       username: example
-#     - network: LinkedIn
-#       username: example
+#   # social_networks:
+#   #   - network: X
+#   #     username: AlbertEinstein
+#   #   - network: GitHub
+#   #     username: example
+#   #   - network: LinkedIn
+#   #     username: example
 # 
-#   address:
-#     street: 2712 Broadway St
-#     city: San Francisco
-#     region: California
-#     postalCode: CA 94115
-#     countryCode: US
+#   # address:
+#   #   street: 2712 Broadway St
+#   #   city: San Francisco
+#   #   region: California
+#   #   postalCode: CA 94115
+#   #   countryCode: US
 # 
 #   sections:
 #     Education:
@@ -187,3 +187,163 @@
 #       - name: Professor Jane Smith
 #         icon: fa-solid fa-thumbtack
 #         reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.5/schema.json
+
+cv:
+  name: Drew McNeely
+  location: Philadelphia, PA
+  email: drew@drewmcneely.net
+  social_networks:
+    - network: GitHub
+      username: drewmcneely
+
+  sections:
+    publications:
+      - title: Hidden Markov Models and the Bayes Filter in Categorical Probability
+        authors:
+          - T. Fritz
+          - A. Klingler
+          - D. McNeely
+          - A. Shah Mohammed
+          - Y. Wang
+        doi: 10.1109/TIT.2025.3584695
+        journal: IEEE Transactions on Information Theory, vol. 71, no. 9, pp. 7052-7075
+        date: 2025-09
+        url: https://arxiv.org/abs/2401.14669
+        highlights:
+          - Equal contributor among 5 authors
+          - Developed categorical recursive formulations for the Bayes filter, forward-backward algorithm, and fixed-interval smoother
+          - Showed that this specializes to Kalman filter, RTS smoother, and other classical algorithms when applied to Gaussian and FinStoch Markov categories
+          - Actively working on implementation with markovcats.jl
+
+    technical projects:
+      - name: "[markovcats.jl](https://github.com/drewmcneely/markovcats.jl)"
+        date: Oct 2025–Present
+        summary: Julia DSL for Categorical Probability
+        highlights:
+          - A Julia DSL with discrete probability syntax and Markov category semantics
+          - Built on GATLab.jl and Catlab.jl within the AlgebraicJulia ecosystem
+
+      - name: "[girypy](https://github.com/drewmcneely/girypy)"
+        date: "2022"
+        summary: Python Library for Categorical Estimation
+        highlights:
+          - Categorical Kalman filter implementation using Gaussian Markov categories
+          - Abstract base class interface for Markov categories with pseudo-DSL using infix operators
+          - Precursor to markovcats.jl
+
+      - name: "[photometry](https://github.com/drewmcneely/photometry)"
+        date: "2020"
+        summary: Satellite Photometry Visualization
+        highlights:
+          - Interactive 3D visualization of photometric output from satellites in orbit
+          - Maps real-valued functions on spherical domains to HTML-based globe rendering
+
+    research experience:
+      - company: Independent Researcher
+        position: Independent Researcher
+        start_date: 2023
+        end_date: 2024
+        highlights:
+          - Co-authored IEEE publication on categorical probability and Bayesian filtering (accepted Sept. 2025)
+          - Attended Applied Category Theory Conference 2023 (College Park, MD)
+
+      - company: "[Adjoint School 2024](https://adjointschool.com/2024.html)"
+        position: "Student — Project: Modeling Uncertainty with Markov Categories"
+        start_date: 2024-01
+        end_date: 2024-06
+        highlights:
+          - Investigated monads for imprecise probability including Dempster-Shafer theory and inner/outer probability measures
+          - Presented preliminary findings at ACT 2024, Oxford, UK
+
+      - company: University of Texas at Austin
+        position: "Graduate Researcher — Categorical Probability (Advisor: Efstathios Bakolas)"
+        location: Austin, TX
+        start_date: 2020
+        end_date: 2023
+        highlights:
+          - Developed polymorphic categorical formulation of recursive Bayesian filters
+          - Created novel framework merging category theory with dynamical systems estimation
+          - Resulted in IEEE Transactions on Information Theory publication
+
+      - company: University of Texas at Austin
+        position: "Graduate Researcher — Geometric Estimation (Advisor: Moriba Jah)"
+        location: Austin, TX
+        start_date: 2017
+        end_date: 2020
+        highlights:
+          - Recursive estimation for dynamical systems with Riemannian state spaces
+          - Clustering analysis of resident space objects
+
+    community leadership:
+      - company: Adjoint School Organizing Committee
+        position: Organizing Committee Member
+        start_date: 2024-07
+        end_date: 2026-07
+        highlights:
+          - Two-year position organizing international applied category theory research program
+          - "Responsibilities: admissions review, mentor recruitment, sponsor outreach, website maintenance, liaison between Steering Committee and ACT Conference Organizing Committee"
+          - "2025: Organized school at University of Florida, Gainesville"
+          - "2026: Organizing school at Tallinn University of Technology, Estonia"
+
+    education:
+      - institution: University of Texas at Austin
+        area: Aerospace Engineering
+        degree: MS
+        end_date: 2023-05
+        highlights:
+          - "Thesis: *Categorical Probability for Abstracting Filtering Algorithms on Stochastic Dynamical Systems*"
+          - "Advisor: Efstathios Bakolas"
+
+      - institution: Missouri University of Science & Technology
+        area: Aerospace Engineering
+        degree: BS
+        end_date: 2015-12
+
+      - institution: Missouri University of Science & Technology
+        area: Mechanical Engineering
+        degree: BS
+        end_date: 2015-12
+
+    teaching experience:
+      - company: Uncommon Schools, Camden Prep High School
+        position: Mathematics Teacher
+        start_date: 2024-08
+        end_date: present
+        highlights:
+          - Algebra 2, Accelerated Precalculus, AP Calculus AB
+
+      - company: UT Austin, University of Arizona
+        position: Teaching Assistant
+        start_date: 2017
+        end_date: 2022
+        highlights:
+          - Calculus 2, Calculus 3, Linear Algebra, Differential Equations, Intro to Computer Programming
+
+      - company: Self-Employed
+        position: Private Tutor
+        start_date: 2016
+        end_date: 2023
+        highlights:
+          - Math (4th grade through college), SAT/ACT/ISEE test prep
+
+    earlier experience:
+      - company: NASA Ames Research Center
+        position: Research Intern
+        date: Summer 2017
+        highlights:
+          - Constrained optimal control for Variable Camber Continuous Trailing Edge Flap aircraft
+
+      - company: Missouri S&T Formula SAE
+        position: Controls & Data Acquisition Lead
+        start_date: 2014
+        end_date: 2016
+        highlights:
+          - 1st place overall Formula North 2016; 4th overall FSAE Lincoln 2016
+
+    skills:
+      - label: Programming
+        details: Julia, Python, MATLAB, Java
+      - label: Languages
+        details: English (native), Dutch (B2)
