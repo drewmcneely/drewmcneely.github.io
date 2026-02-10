@@ -2,7 +2,7 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 # cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-email: you@example.com # your email address
+email: drew@drewmcneely.net # your email address
 github_username: drewmcneely
 orcid_id: 0009-0005-2310-806X
 dblp_url: https://dblp.org/pid/202/5812.html
