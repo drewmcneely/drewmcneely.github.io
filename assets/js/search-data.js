@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/website-dev/cv/";
@@ -452,13 +452,6 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/website-dev/teachings/introduction-to-machine-learning/";
             },},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%64%72%65%77@%64%72%65%77%6D%63%6E%65%65%6C%79.%6E%65%74", "_blank");
-        },
-      },{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
