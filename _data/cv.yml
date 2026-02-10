@@ -50,6 +50,7 @@ cv:
 
     Experience:
       - company: Uncommon Schools, Camden Prep High School
+        location: Camden, NJ
         position: Mathematics Teacher
         start_date: 2024-08
         end_date: present
@@ -57,6 +58,7 @@ cv:
           - Algebra 2, Accelerated Precalculus, AP Calculus AB
 
       - company: The Adjoint School
+        location: Various
         position: Organizing Committee Member
         start_date: 2024-07
         end_date: 2026-07
@@ -68,6 +70,7 @@ cv:
 
       - company: Independent Researcher
         position: Independent Researcher
+        location: Stephenville, TX
         start_date: 2023
         end_date: 2024
         highlights:
@@ -76,6 +79,7 @@ cv:
 
       - company: "Adjoint School 2024"
         position: "Student — Project: Modeling Uncertainty with Markov Categories"
+        location: Oxford, UK
         start_date: 2024-01
         end_date: 2024-06
         highlights:
@@ -103,13 +107,15 @@ cv:
 
       - company: UT Austin, University of Arizona
         position: Teaching Assistant
+        location: Tucson, AZ
         start_date: 2017
         end_date: 2022
         highlights:
           - Calculus 2, Calculus 3, Linear Algebra, Differential Equations, Intro to Computer Programming
 
-      - company: Self-Employed
+      - company: Austin Learning Center
         position: Private Tutor
+        location: Austin ,TX
         start_date: 2016
         end_date: 2023
         highlights:
@@ -117,12 +123,15 @@ cv:
 
       - company: NASA Ames Research Center
         position: Research Intern
-        date: Summer 2017
+        location: Mountain View, CA
+        start_date: 2017-05
+        end_date: 2017-07
         highlights:
           - Constrained optimal control for Variable Camber Continuous Trailing Edge Flap aircraft
 
     Education:
       - institution: University of Texas at Austin
+        location: Austin, TX
         area: Aerospace Engineering
         degree: MS
         end_date: 2023-05
@@ -131,20 +140,33 @@ cv:
           - "Advisor: Efstathios Bakolas"
 
       - institution: Missouri University of Science & Technology
+        location: Rolla, MO
         area: Aerospace Engineering
         degree: BS
         end_date: 2015-12
 
       - institution: Missouri University of Science & Technology
+        location: Rolla, MO
         area: Mechanical Engineering
         degree: BS
         end_date: 2015-12
 
     Skills:
-      - name: Julia
-      - name: Python
-      - name: MATLAB
-      - name: Java
+      - name: Programming Languages
+        keywords: 
+          - Julia
+          - Python
+          - MATLAB
+          - Java
+      - name: Tools
+        keywords:
+          - git
+          - Github
+          - linux
+      - name: Mathematics
+        keywords:
+          - applied category theory
+          - applied differential geometry
 
     Languages:
       - name: Dutch

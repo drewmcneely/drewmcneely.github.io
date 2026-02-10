@@ -8,8 +8,8 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>drew AT drewmcneely DOT net</p>
+  # more_info: >
+  #   <p>drew AT drewmcneely DOT net</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,10 @@ latest_posts:
 
 Hello, I'm Drew!
 
-I received an MS in aerospace engineering at UT Austin under Efstathios Bakolas. My thesis was in categorical Kalman filtering. I wrote a [paper](https://arxiv.org/abs/2401.14669) with Tobias Fritz's group on the topic, check it out! (See v2 for a more beginner-friendly version)
+I'm a researcher working at the intersection of category theory, probabilistic programming, and dynamical systems. I completed my MS in Aerospace Engineering at UT Austin, where I developed a categorical framework for Kalman filtering under Efstathios Bakolas. This work led to a publication in IEEE Transactions on Information Theory (co-authored with Tobias Fritz's group at the University of Innsbruck).
 
-My primary interests are in systems, controls, and estimation, often from a categorical perspective. I'm active in the applied category theory community, and I am on the organizing committee for [The Adjoint School](https://adjointschool.com).
+I'm currently building [markovcats.jl](https://github.com/drewmcneely/markovcats.jl), a Julia DSL that translates probability syntax into categorical semantics using Markov categories. I also serve on the organizing committee for The Adjoint School, an international research program for applied category theory.
 
-I live in Philly and currently teach math in Camden, NJ.
+I'm seeking research software engineering positions in probabilistic programming, applied category theory, dynamical systems, or related areas. Please reach out if you're interested to chat!
+
+Currently based in Philadelphia, Pennsylvania
