@@ -1,13 +1,13 @@
 cv:
   name: Drew McNeely
   location: Philadelphia, PA
-  email: drew@drewmcneely.net
+  email: drew at drewmcneely dot net
   social_networks:
     - network: GitHub
       username: drewmcneely
 
   sections:
-    publications:
+    Publications:
       - title: Hidden Markov Models and the Bayes Filter in Categorical Probability
         authors:
           - T. Fritz
@@ -25,15 +25,15 @@ cv:
           - Showed that this specializes to Kalman filter, RTS smoother, and other classical algorithms when applied to Gaussian and FinStoch Markov categories
           - Actively working on implementation with markovcats.jl
 
-    technical projects:
-      - name: "[markovcats.jl](https://github.com/drewmcneely/markovcats.jl)"
+    Projects:
+      - name: markovcats.jl
         date: Oct 2025–Present
         summary: Julia DSL for Categorical Probability
         highlights:
           - A Julia DSL with discrete probability syntax and Markov category semantics
           - Built on GATLab.jl and Catlab.jl within the AlgebraicJulia ecosystem
 
-      - name: "[girypy](https://github.com/drewmcneely/girypy)"
+      - name: "girypy"
         date: "2022"
         summary: Python Library for Categorical Estimation
         highlights:
@@ -41,14 +41,31 @@ cv:
           - Abstract base class interface for Markov categories with pseudo-DSL using infix operators
           - Precursor to markovcats.jl
 
-      - name: "[photometry](https://github.com/drewmcneely/photometry)"
+      - name: "photometry"
         date: "2020"
         summary: Satellite Photometry Visualization
         highlights:
           - Interactive 3D visualization of photometric output from satellites in orbit
           - Maps real-valued functions on spherical domains to HTML-based globe rendering
 
-    research experience:
+    Experience:
+      - company: Uncommon Schools, Camden Prep High School
+        position: Mathematics Teacher
+        start_date: 2024-08
+        end_date: present
+        highlights:
+          - Algebra 2, Accelerated Precalculus, AP Calculus AB
+
+      - company: The Adjoint School
+        position: Organizing Committee Member
+        start_date: 2024-07
+        end_date: 2026-07
+        highlights:
+          - Two-year position organizing international applied category theory research program
+          - "Responsibilities: admissions review, mentor recruitment, sponsor outreach, website maintenance, liaison between Steering Committee and ACT Conference Organizing Committee"
+          - "2025: Organized school at University of Florida, Gainesville"
+          - "2026: Organizing school at Tallinn University of Technology, Estonia"
+
       - company: Independent Researcher
         position: Independent Researcher
         start_date: 2023
@@ -57,7 +74,7 @@ cv:
           - Co-authored IEEE publication on categorical probability and Bayesian filtering (accepted Sept. 2025)
           - Attended Applied Category Theory Conference 2023 (College Park, MD)
 
-      - company: "[Adjoint School 2024](https://adjointschool.com/2024.html)"
+      - company: "Adjoint School 2024"
         position: "Student — Project: Modeling Uncertainty with Markov Categories"
         start_date: 2024-01
         end_date: 2024-06
@@ -84,18 +101,27 @@ cv:
           - Recursive estimation for dynamical systems with Riemannian state spaces
           - Clustering analysis of resident space objects
 
-    community leadership:
-      - company: Adjoint School Organizing Committee
-        position: Organizing Committee Member
-        start_date: 2024-07
-        end_date: 2026-07
+      - company: UT Austin, University of Arizona
+        position: Teaching Assistant
+        start_date: 2017
+        end_date: 2022
         highlights:
-          - Two-year position organizing international applied category theory research program
-          - "Responsibilities: admissions review, mentor recruitment, sponsor outreach, website maintenance, liaison between Steering Committee and ACT Conference Organizing Committee"
-          - "2025: Organized school at University of Florida, Gainesville"
-          - "2026: Organizing school at Tallinn University of Technology, Estonia"
+          - Calculus 2, Calculus 3, Linear Algebra, Differential Equations, Intro to Computer Programming
 
-    education:
+      - company: Self-Employed
+        position: Private Tutor
+        start_date: 2016
+        end_date: 2023
+        highlights:
+          - Math (4th grade through college), SAT/ACT/ISEE test prep
+
+      - company: NASA Ames Research Center
+        position: Research Intern
+        date: Summer 2017
+        highlights:
+          - Constrained optimal control for Variable Camber Continuous Trailing Edge Flap aircraft
+
+    Education:
       - institution: University of Texas at Austin
         area: Aerospace Engineering
         degree: MS
@@ -114,47 +140,24 @@ cv:
         degree: BS
         end_date: 2015-12
 
-    teaching experience:
-      - company: Uncommon Schools, Camden Prep High School
-        position: Mathematics Teacher
-        start_date: 2024-08
-        end_date: present
-        highlights:
-          - Algebra 2, Accelerated Precalculus, AP Calculus AB
+    Skills:
+      - name: Julia
+      - name: Python
+      - name: MATLAB
+      - name: Java
 
-      - company: UT Austin, University of Arizona
-        position: Teaching Assistant
-        start_date: 2017
-        end_date: 2022
-        highlights:
-          - Calculus 2, Calculus 3, Linear Algebra, Differential Equations, Intro to Computer Programming
+    Languages:
+      - name: Dutch
+        summary: "CEFR B2"
+      - name: English
+        summary: "Native"
 
-      - company: Self-Employed
-        position: Private Tutor
-        start_date: 2016
-        end_date: 2023
-        highlights:
-          - Math (4th grade through college), SAT/ACT/ISEE test prep
-
-    earlier experience:
-      - company: NASA Ames Research Center
-        position: Research Intern
-        date: Summer 2017
-        highlights:
-          - Constrained optimal control for Variable Camber Continuous Trailing Edge Flap aircraft
-
-      - company: Missouri S&T Formula SAE
-        position: Controls & Data Acquisition Lead
-        start_date: 2014
-        end_date: 2016
-        highlights:
-          - 1st place overall Formula North 2016; 4th overall FSAE Lincoln 2016
-
-    skills:
-      - label: Programming
-        details: Julia, Python, MATLAB, Java
-      - label: Languages
-        details: English (native), Dutch (B2)
+#     Languages:
+#       - name: German
+#         summary: "Native speaker"
+# 
+#       - name: English
+#         summary: "Fluent"
 
 # cv:
 #   name: Drew Allen McNeely
