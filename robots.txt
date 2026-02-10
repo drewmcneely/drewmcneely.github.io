@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://drewmcneely.github.io/website-dev/sitemap.xml
+Sitemap: https://drewmcneely.github.io/sitemap.xml
