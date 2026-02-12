@@ -29,7 +29,7 @@ Hello, I'm Drew!
 
 I'm a researcher doing work in the intersection of category theory, probabilistic programming, and dynamical systems. I completed my MS in Aerospace Engineering at UT Austin, where I developed a categorical framework for Kalman filtering under Efstathios Bakolas. This work led to a publication in IEEE Transactions on Information Theory (co-authored with Tobias Fritz's group at the University of Innsbruck).
 
-I'm currently building [markovcats.jl](https://github.com/drewmcneely/markovcats.jl), a Julia DSL that translates probability syntax into categorical semantics using Markov categories. I also serve on the organizing committee for The Adjoint School, an international research program for applied category theory.
+I'm currently building [markovcats.jl](https://github.com/drewmcneely/markovcats.jl), a Julia DSL that translates discrete probability syntax into categorical semantics using the AlgebraicJulia ecosystem. I also serve on the organizing committee for The Adjoint School, an international research program for applied category theory.
 
 I'm seeking research software engineering positions in probabilistic programming, applied category theory, dynamical systems, or related areas. Please reach out if you're interested to chat!
 
