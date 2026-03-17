@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MS, Aerospace Engineering. Independent researcher, programmer, and applied category theorist.
+subtitle: MS, Aerospace Engineering | Independent researcher in applied category theory | High school mathematics teacher, Camden, NJ
 
 profile:
   align: right
