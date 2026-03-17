@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MS, Aerospace Engineering | Independent researcher in applied category theory | High school mathematics teacher, Camden, NJ
+subtitle: MS, Aerospace Engineering ○ Independent researcher in applied category theory ○ High school math teacher
 
 profile:
   align: right
