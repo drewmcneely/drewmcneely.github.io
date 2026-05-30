@@ -8,9 +8,16 @@ categories: categorical-systems
 related_posts: true
 ---
 
-What is the Grothendieck construction? And why is it important? It's useful for collecting data together in a bunch of different categories. If you have categories that are "indexed" over a variable (another category in this case), then the Grothendieck construction is kind of like taking the union $$\cup_i C_i$$ of the categories over the index.
-This shows up in David Jaz's construction for describing double categories of dynamical systems, and apparently also in ontologies according to David Wise.
-Generally a lens is a certain Grothendieck construction, so this also useful for databases (which can be viewed as dynamical systems themselves!)
+What is the Grothendieck construction? 
+Well if you read the [n-lab article](https://ncatlab.org/nlab/show/Grothendieck+construction), it's clearly just a reconstruction of a morphism that arises as a pullback along a classifying morphism to some universal object of some universal morphism.[^1]
+
+[^1]: What's the problem?
+
+If you can understand this definition, that's an amazing achievement!
+But if you're working with practical applications such as lenses for databases, open dynamical systems, or ontologies, then it might be helpful to see a visual of what's going on.
+
+Before we start, let's get a reminder of one way the Grothendieck construction can be useful: in unifying open dynamical systems theories. Linear continuous-time systems ($\dot{x} = Ax + Bu$), discrete-time systems ($x_{k+1} = f(x_k, u_k)$), and stochastic processes with input ($P(X_{k+1} | X_{k}, U_k)$) all have different update equations, but similar structure. Is there a unifying theory to describe all of these?
+With the Grothendieck construction, there is!
 
 # What is an indexed category?
 
