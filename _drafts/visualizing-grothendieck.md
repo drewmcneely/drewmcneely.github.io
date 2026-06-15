@@ -19,18 +19,22 @@ But if you're working with applications such as lenses for databases, open dynam
 Before we start, let's get a reminder of one way the Grothendieck construction can be useful: in unifying open dynamical systems theories. Linear continuous-time systems ($\dot{x} = Ax + Bu$), discrete-time systems ($x_{k+1} = f(x_k, u_k)$), and stochastic processes with input ($P(X_{k+1} | X_{k}, U_k)$) all have different update equations, but similar structure. Is there a unifying theory to describe all of these?
 With the Grothendieck construction, there is!
 
-To set the stage, we start with an indexed category $\mathsf{F}: \mathsf{C} \rightarrow \mathsf{Cat}$ which is a collection of categories indexed over a base category $\mathsf{C}$.
-The Grothendieck construction $\int_{\mathsf{C}} \mathsf{F}$ then somehow takes the union of these categories over the indexing category.
+To set the stage, the spaces and models in our systems theory are organized in an indexed category $\mathsf{F}$; that is, a collection of categories with functors between them indexed by a base category $\mathsf{C}$.
+The Grothendieck construction $\int_{\mathsf{C}} \mathsf{F}$ then in a certain sense takes the union of these categories so that maps in different contexts all live together.
 We'll start by visualizing what an indexed category actually is, along with an example.
 
 # What is an indexed category?
 
-An indexed category is a family of categories that are indexed by a base category $\mathsf{C}$. This can be defined as a functor $\mathsf{F} : \mathsf{C} \rightarrow \mathsf{Cat}$.
-(All our examples will actually be contravariant, but it works either way.)
-More explicitly, for every object $a\in \mathsf{C}$, there's a category $F(a)$.
-Since $\mathsf{F}$ is a functor into $\mathsf{Cat}$, it also maps to functors between the indexed categories. I call these the "re-indexing" functors: for every morphism $f:a\rightarrow b$ in $\mathsf{C}$, there's a functor $F(f): F(a) \Rightarrow F(b)$.
-This functor itself maps objects $F(r) \ni p \mapsto F(f)(p) \in F(b)$.
-This can be visualized by the diagram below:
+An indexed set $S_{i}$ is a family of sets, one for each element $i\in I$.
+This can be viewed as a map $f: I \rightarrow \mathsf{Set}$ which takes each index to its set $I\ni i \mapsto S_i \in \mathsf{Set}$.
+
+Similarly, an indexed category $\mathsf{F}$ is a family of categories indexed by objects in a base category $\mathsf{C}$.
+This means that for every object $a\in \mathsf{C}$, there's a category $\mathsf{F}a$.
+We add extra categorical data though: our map is now a functor $\mathsf{F} : \mathsf{C} \rightarrow \mathsf{Cat}$
+(or $\mathsf{F} : \mathsf{C}^{op} \rightarrow \mathsf{Cat}$ for a contravariant indexed category, which will be the case in most of our examples).
+This means that not only do objects in $\mathsf{C}$ map to categories, but also morphisms in $\mathsf{C}$ map to functors between those categories.
+I call these the "re-indexing" functors: for every morphism $f:a\rightarrow b$ in $\mathsf{C}$, there's a functor $\mathsf{F}f: \mathsf{F}a \Rightarrow \mathsf{F}b$.
+Since there are multiple layers of functors, here's a drawing of what's going on:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -40,6 +44,12 @@ This can be visualized by the diagram below:
 <div class="caption">
     Anatomy of an indexed category. It's functors all the way down.
 </div>
+
+
+As we can see, for an object $a$ in $\mathsf{C}$, we have a category $\mathsf{F}a \in \mathsf{Cat}$.
+For a morphism $f:a\rightarrow b \in \mathsf{C}$, we have a re-indexing functor $\mathsf{F}f : \mathsf{F}a \Rightarrow \mathsf{F}b$.
+
+*This* functor itself maps the object $p \in \mathsf{F}a$ over to $\mathsf{F}fp \in \mathsf{F}b$ and morphisms between them.
 
 The purple morphisms in $\mathsf{F}(a)$ get mapped to $\mathsf{F}(b)$ through $\mathsf{F}(f)$ and to $\mathsf{F}(c)$ through $\mathsf{F}(g\circ f)$ 
 The leftover $\mathsf{F}(b)$ morphisms in green get mapped to $\mathsf{F}(c)$ through $\mathsf{F}(g)$.
