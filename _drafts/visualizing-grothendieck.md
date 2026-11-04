@@ -114,3 +114,5 @@ This means that the square of the functor is $$C\otimes X \otimes X$$, so the co
 
 
 # The Grothendieck Construction
+
+The Grothendieck construction allows us to take the data of an indexed category and union it all together. There are four different flavors that we'll consider: the two cases where the indexed category is covariant or contravariant, and for each case, we could take the construction of the indexed category straight up, or build the construction of the pointwise opposite. We want to consider these pointwise opposites because these are what form lenses for databases and dynamical systems!
