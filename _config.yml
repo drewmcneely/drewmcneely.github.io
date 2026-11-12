@@ -97,6 +97,7 @@ blog_name: Drew's Thoughts # blog_name will be displayed in your blog page
 blog_description: A place for thoughts on my projects, research, and hobbies.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
+future: true
 
 # Pagination
 pagination:
