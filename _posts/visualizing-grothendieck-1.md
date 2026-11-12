@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The Grothendieck Construction in Pictures
-date: 2026-04-12
+title: The Grothendieck Construction in Pictures Part 1 -- Indexed Categories
+date: 2026-11-11
 description: What is the Grothendieck construction? How do I visualize it?
-tags: lenses systems
+tags: lenses systems categories markov-categories controls
 categories: categorical-systems
 related_posts: true
 ---
@@ -21,7 +21,7 @@ With the Grothendieck construction, there is!
 
 To set the stage, the spaces and models in our systems theory are organized in an indexed category $\mathsf{F}$; that is, a collection of categories with functors between them indexed by a base category $\mathsf{C}$.
 The Grothendieck construction $\int_{\mathsf{C}} \mathsf{F}$ then in a certain sense takes the union of these categories so that maps in different contexts all live together.
-We'll start by visualizing what an indexed category actually is, along with an example.
+We'll start in this post by visualizing what an indexed category actually is, along with an example.
 
 # What is an indexed category?
 
@@ -30,59 +30,71 @@ This can be viewed as a map $f: I \rightarrow \mathsf{Set}$ which takes each ind
 
 Similarly, an indexed category $\mathsf{F}$ is a family of categories indexed by objects in a base category $\mathsf{C}$.
 This means that for every object $a\in \mathsf{C}$, there's a category $\mathsf{F}a$.
-We add extra categorical data though: our map is now a functor $\mathsf{F} : \mathsf{C} \rightarrow \mathsf{Cat}$
-(or $\mathsf{F} : \mathsf{C}^{op} \rightarrow \mathsf{Cat}$ for a contravariant indexed category, which will be the case in most of our examples).
+We add extra categorical data though: our map is now a functor $\mathsf{F} : \mathsf{C} \rightarrow \mathsf{Cat}$.
 This means that not only do objects in $\mathsf{C}$ map to categories, but also morphisms in $\mathsf{C}$ map to functors between those categories.
 I call these the "re-indexing" functors: for every morphism $f:a\rightarrow b$ in $\mathsf{C}$, there's a functor $\mathsf{F}f: \mathsf{F}a \Rightarrow \mathsf{F}b$.
 Since there are multiple layers of functors, here's a drawing of what's going on:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/grothendieck-construction_annotated.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/visualizing-grothendieck-construction/generic-indexed-category.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
     Anatomy of an indexed category. It's functors all the way down.
 </div>
 
-
 As we can see, for an object $a$ in $\mathsf{C}$, we have a category $\mathsf{F}a \in \mathsf{Cat}$.
 For a morphism $f:a\rightarrow b \in \mathsf{C}$, we have a re-indexing functor $\mathsf{F}f : \mathsf{F}a \Rightarrow \mathsf{F}b$.
 
-*This* functor itself maps the object $p \in \mathsf{F}a$ over to $\mathsf{F}fp \in \mathsf{F}b$ and morphisms between them.
+Notice that the objects $p$ $q$ and $r$ in the red category $\mathsf{F}a$ get mapped through the functor $\mathsf{F}f$ into the green category $\mathsf{F}b$, which already has its own objects $u$ $v$ and $w$.
+The morphisms between $p$ $q$ and $r$ get mapped too, but I don't label the arrows here for the sake of space.
 
-The purple morphisms in $\mathsf{F}(a)$ get mapped to $\mathsf{F}(b)$ through $\mathsf{F}(f)$ and to $\mathsf{F}(c)$ through $\mathsf{F}(g\circ f)$ 
-The leftover $\mathsf{F}(b)$ morphisms in green get mapped to $\mathsf{F}(c)$ through $\mathsf{F}(g)$.
+Further, everything in the green category $Fb$ gets mapped into the blue category $\mathsf{F}c$:
+The original red objects and morphisms from $Fa$ were carried all the way through $\mathsf{F}g\circ \mathsf{F}f$, whereas the green objects and morphisms that started in $\mathsf{F}b$ are just mapped into $\mathsf{F}c$ through $\mathsf{F}g$.
+
+Contravariant indexed categories (that is, $\mathsf{F} : \mathsf{C}^{op} \rightarrow \mathsf{Cat}$, where the re-indexing functors go backwards) exist as well, as we'll see in our next example.
 
 ## Example: The Co-Kleisli Category of the Co-reader Co-monad
 
-Say that five times fast.
+Say that five times fast. Here's what it looks like.
 
-Take any CD-category $$(\mathsf{C}, \otimes, \mathrm{copy}, \mathrm{del})$$: that is, a symmetric monoidal category in which every object is a commutative comonoid. For an object $$u$$, the endofunctor $$u\otimes -$$ forms a comonad $(u\otimes -,\ \kappa = \mathrm{copy}\otimes\mathrm{id}, \epsilon = \mathrm{del}\otimes\mathrm{id})$. Note, $\kappa$ and $\epsilon$ are natural even if $\mathrm{copy}$ and $\mathrm{del}$ are not![^2]
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/visualizing-grothendieck-construction/cokl.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Anatomy of an indexed category. It's functors all the way down.
+</div>
 
-[^2]: Quick exercise, prove this.
+In a CD-category $\mathsf{C}$ and given an object $u$, the coreader functor $u\otimes -$ forms a co-monad with $\kappa = \mathrm{copy}\otimes\mathrm{id}$ and $\epsilon = \mathrm{del}\otimes\mathrm{id}$.
+Note, $\kappa$ and $\epsilon$ are natural even if $\mathrm{copy}$ and $\mathrm{del}$ are not![^3]
+Its coKleisli category has the same objects as $\mathsf{C}$ but the morphisms are those in $\mathsf{C}$ that are parameterized by the contextualizing object $u$.
 
-The coKleisli category of this comonad can be thought of as a parametrizing construction; a morphism $u\otimes x \rightarrow y$ in the coKleisli category is effectively just a morphism $x\rightarrow y$ that is now dependent on an extra external parameter $u$.
+[^2]: We can relax this to any Markov category, in a future blog post!
+[^3]: Quick exercise, prove this.
+
+This coKleisli category can be thought of as a parametrizing construction; a morphism $u\otimes x \rightarrow y$ in the coKleisli category is effectively just a morphism $x\rightarrow y$ that is now dependent on an extra external parameter $u$.
 For instance in a switching system, the dynamic model $X_{k+1} \sim p(x_{k+1} | x_{k}, u)$ can change based on the parameter $u$.
 For open dynamical systems with control input, $u$ will be the input space, giving $[x^T, u^T]^T \mapsto \dot{x}$ with $\dot{x} = Ax + Bu$.
 
 These morphisms compose through copying: say we wnat to compose a dynamics model $(x_{k}, u) \mapsto x_{k+1}$ and measurement model $(x_{k+1}, u) \mapsto y$, that is
 
 $$x_{k+1} = Ax + Bu$$
+
 $$y = Cx + Du$$
 
-Then the map from $x_k$ to $y$ becomes $y = CAx_k + (CB + D)u$ through the following coKleisli composition
-
-![Picture (1)]()
+Then the map from $x_k$ to $y$ becomes $y = CAx_k + (CB + D)u$ through coKleisli composition.
 
 This current construction has every map parametrized by the same object $u$.
 But as we know, different systems in the real world could have different input spaces.
 Let's parametrize $\mathsf{coKl}(u\otimes -)$ with respect to $u$: we call this map $\mathsf{Ctx}(u) = \mathsf{coKl}(u\otimes -)$ inspired by [David Jaz](Categorical Systems Theory Definition 2.6.2.1).
 When we vary $u$, we get systems with different input/contextualizing parameter spaces.
 We want to take the union of each of these coKleisli categories so that all systems live in the same category.
-The question is, does $\mathsf{Ctx}$ form an indexed category, ie. is it functorial?
+The question is, does $\mathsf{Ctx}$ form an indexed category? Is it functorial?
 If $\mathsf{C}$ is Cartesian, then it is!
-It's actually a contravariant indexed category, meaning the re-indexing functors go the other way as in the below picture.
+It's actually a contravariant indexed category, meaning the re-indexing functors go the other way from our above definition.
 
 Homework: Find the reindexing functors.
 
@@ -109,10 +121,12 @@ This means that the square of the functor is $$C\otimes X \otimes X$$, so the co
     <summary>Click for answer!</summary>
     Given a morphism $f : C \rightarrow D$, we need a functor that either takes a morphism $C\times X \rightarrow Y$ to $D\times X \rightarrow Y$ or vise-versa, depending on whether it's covariant or contravariant. Pre-composing with $f\otimes \mathrm{id}$ does the trick (that is, $\mathsf{Ctx}\ f : (g : D \times X \rightarrow Y) \rightarrow (g \circ (f\times \mathrm{id}))$), meaning that $\mathsf{Ctx}$ is contravariant.
 
-![Image explaining all this]()
 </details>
 
 
-# The Grothendieck Construction
 
-The Grothendieck construction allows us to take the data of an indexed category and union it all together. There are four different flavors that we'll consider: the two cases where the indexed category is covariant or contravariant, and for each case, we could take the construction of the indexed category straight up, or build the construction of the pointwise opposite. We want to consider these pointwise opposites because these are what form lenses for databases and dynamical systems!
+# Conclusion: Leading to the Grothendieck Construction
+
+We would like a category that has all the morphisms parameterized by different control input spaces or parameter spaces put together in a way that's composable.
+The Grothendieck construction allows us to union all the categories together over their indices!
+In the next post, we'll be looking at precisely how this is done and contextualize it with our coKleisli example -- which as you might have guessed, is the setting for classical open dynamical systems theory!
