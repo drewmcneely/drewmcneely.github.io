@@ -8,7 +8,7 @@ categories: categorical-systems
 related_posts: true
 ---
 
-What is the Grothendieck construction? 
+What is the Grothendieck construction?
 Well if you read the [n-lab article](https://ncatlab.org/nlab/show/Grothendieck+construction), it's clearly just a reconstruction of a morphism that arises as a pullback along a classifying morphism to some universal object of some universal morphism.[^1]
 
 [^1]: What's the problem?
@@ -73,6 +73,7 @@ Note, $\kappa$ and $\epsilon$ are natural even if $\mathrm{copy}$ and $\mathrm{d
 Its coKleisli category has the same objects as $\mathsf{C}$ but the morphisms are those in $\mathsf{C}$ that are parameterized by the contextualizing object $u$.
 
 [^2]: We can relax this to any Markov category, in a future blog post!
+
 [^3]: Quick exercise, prove this.
 
 This coKleisli category can be thought of as a parametrizing construction; a morphism $u\otimes x \rightarrow y$ in the coKleisli category is effectively just a morphism $x\rightarrow y$ that is now dependent on an extra external parameter $u$.
@@ -122,8 +123,6 @@ This means that the square of the functor is $$C\otimes X \otimes X$$, so the co
     Given a morphism $f : C \rightarrow D$, we need a functor that either takes a morphism $C\times X \rightarrow Y$ to $D\times X \rightarrow Y$ or vise-versa, depending on whether it's covariant or contravariant. Pre-composing with $f\otimes \mathrm{id}$ does the trick (that is, $\mathsf{Ctx}\ f : (g : D \times X \rightarrow Y) \rightarrow (g \circ (f\times \mathrm{id}))$), meaning that $\mathsf{Ctx}$ is contravariant.
 
 </details>
-
-
 
 # Conclusion: Leading to the Grothendieck Construction
 
