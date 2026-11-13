@@ -30,18 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-test-post",
-        
-          title: "test-post",
-        
-        description: "Test Post",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/test/";
-          
-        },
-      },{id: "post-the-grothendieck-construction-in-pictures-part-1-indexed-categories",
+        },{id: "post-the-grothendieck-construction-in-pictures-part-1-indexed-categories",
         
           title: "The Grothendieck Construction in Pictures Part 1 -- Indexed Categories",
         
