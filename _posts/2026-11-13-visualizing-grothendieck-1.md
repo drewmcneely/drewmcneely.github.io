@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Grothendieck Construction in Pictures Part 1 -- Indexed Categories
-date: 2026-11-11
+date: 2026-11-13 16:30:00-0500
 description: What is the Grothendieck construction? How do I visualize it?
 tags: lenses systems categories markov-categories controls
 categories: categorical-systems
