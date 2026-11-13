@@ -30,7 +30,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "news-a-simple-inline-announcement",
+        },{id: "post-test-post",
+        
+          title: "test-post",
+        
+        description: "Test Post",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/test/";
+          
+        },
+      },{id: "post-the-grothendieck-construction-in-pictures-part-1-indexed-categories",
+        
+          title: "The Grothendieck Construction in Pictures Part 1 -- Indexed Categories",
+        
+        description: "What is the Grothendieck construction? How do I visualize it?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/visualizing-grothendieck-1/";
+          
+        },
+      },{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
           section: "News",},{id: "news-a-long-announcement-with-details",
